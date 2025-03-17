@@ -1,0 +1,6 @@
+# Ignore config file
+config.yaml
+
+# Ignore Go workspace files
+bin/
+pkg/
