@@ -2,7 +2,7 @@ name: Docker Build and Push
 
 on:
   push:
-    branches: [ "master" ]  # Or 'main' if your repo uses that
+    branches: [ "master" ]  ## Or 'main' if your repo uses that
 
 jobs:
   docker:
