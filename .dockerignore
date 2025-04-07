@@ -1,0 +1,14 @@
+# Binaries
+simswap
+*.exe
+*.out
+
+# Git
+.git
+.gitignore
+
+# OS files
+.DS_Store
+
+# IDE config
+.vscode

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  harperdb:
+    image: harperdb/harperdb:latest
+    container_name: harperdb
+    restart: always
+    ports:
+      - "9925:9925"
+    volumes:
+      - harperdb_data:/opt/harperdb/hdb
+    environment:
+      - HDB_ADMIN_USERNAME=HDB_ADMIN
+      - HDB_ADMIN_PASSWORD=password
+
+volumes:
+  harperdb_data:
