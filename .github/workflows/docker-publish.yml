@@ -2,7 +2,7 @@ name: Docker Build and Push
 
 on:
   push:
-    branches: [ "master" ]  ## Or 'main' if your repo uses that
+    branches: [ "master" ]
 
 jobs:
   docker:
@@ -27,4 +27,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: balu6914/simswap-poc:latest
+          tags: balu1921/simswap-poc:latest
