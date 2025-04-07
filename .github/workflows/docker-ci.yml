@@ -1,45 +1,26 @@
-name: Go CI & Docker Build
+name: CI Build
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - master
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout source
         uses: actions/checkout@v3
 
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.20'
+          go-version: 1.23
 
-      - name: Cache Go modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/go-build
-            ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
-
-      - name: Install dependencies
-        run: go mod tidy
-
-      - name: Run Go build
+      - name: Build app
         run: go build -v ./...
 
-      - name: Run Go tests
+      - name: Run tests
         run: go test ./...
-
-      - name: Build Docker image
-        run: docker build -t simswap-poc .
-
-      - name: Print success
-        run: echo "Build & Test Successful"
