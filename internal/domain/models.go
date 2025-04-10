@@ -18,3 +18,5 @@ type CreateCheckSimSwap struct {
 	PhoneNumber string `json:"phoneNumber"`
 	MaxAge      int    `json:"maxAge"`
 }
+
+

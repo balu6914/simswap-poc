@@ -1,8 +1,7 @@
-# SIM Swap Detection - Proof of Concept (PoC)
+# SIM Swap Detection
 
 > A service that integrates with a SIM Swap detection API to verify mobile numbers before processing sensitive user flows. Built using Go, Echo Framework, HarperDB, and Docker.
 
----
 
 ## Features
 
@@ -13,7 +12,6 @@
 - API testing with Postman
 - CI/CD with GitHub Actions & Docker Hub
 
----
 
 ## Tech Stack
 
@@ -26,7 +24,6 @@
 | CI/CD          | GitHub Actions + Docker Hub    |
 | API Testing    | Postman                        |
 
----
 
 ## Project Structure
 
